@@ -12,7 +12,7 @@ def render_response(message):
         click.secho(message, bold=True, fg="blue")
 
 
-async def astronout():
+async def astronaut():
     uri = "ws://localhost:8765"
     async with websockets.connect(uri) as websocket:
         is_ready = input("Are you ready? ")
@@ -25,7 +25,7 @@ async def astronout():
 
 
 async def main():
-    await asyncio.gather(astronout(), astronout(), astronout(), astronout())
+    await asyncio.gather(astronaut(), astronaut(), astronaut(), astronaut())
 
 
 asyncio.run(main())
